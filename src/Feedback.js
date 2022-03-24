@@ -25,13 +25,22 @@ function Feedback() {
           <NavbarComponent />
 
 
-       <h1> You can provide feedback at rahulgol97@gmail.com </h1>
+       <div className="landing-contents">
 
-        <div class="laser-beam red"></div>
-        
+                <p className="greeting-logo"> trackid </p>
+
+                <p className="greeting-text"> Find & Celebrate Dance Music </p>
 
 
-       
+            
+
+                <p className="about-title"> Feedback</p>
+
+                <p className="about-text"> If you have any feedback, I'd love to hear from you at rahulgol97@gmail.com </p>
+
+
+
+            </div>    
         
    
     </div>

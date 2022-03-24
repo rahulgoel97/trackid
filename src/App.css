@@ -111,7 +111,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  animation: shine 8s linear infinite;
+  animation: shine 3s linear infinite;
 
   
   }
@@ -131,19 +131,21 @@ a {
   color: #999;
 }
 
-
-.search-option-header{
-  font-size: 4.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-
-
-.search-option-text{
+.about-text{
+  border-radius: 50px;
+  border: none;
+  color: rgba(212, 255, 0,0.8);
   font-size: 2rem;
   color: #999;
+  padding: 2px 2px 2px 2px;
+  margin: 2px 2px 2px 2px;
 }
+
+.about-title{
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgba(149, 0, 255,0.8);
+  }
 
 
 
@@ -155,6 +157,72 @@ a {
 /* ========================== */
 /* Phone view */
 @media (max-width: 767px) {
+
+  .about-text{
+  border-radius: 50px;
+  border: none;
+  color: rgba(212, 255, 0,0.8);
+  font-size: 1.5rem;
+  color: #999;
+  padding: 2px 2px 2px 2px;
+  margin: 2px 2px 2px 2px;
+}
+
+
+
+.left-div{
+  background-color: rgb(21, 24, 28);
+  width: 100%;
+  
+  border-radius: 50vmin; 
+  box-shadow: 0 2px 40px 5px rgba(0, 255, 191,0.8);
+  height: 12rem;
+  color: white;
+}
+
+
+.left-div:hover{
+   width: 100%;
+  
+  border-radius: 50vmin; 
+  background-color: rgb(21, 24, 28);
+  -webkit-animation-name: colorChange;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 6s; 
+  height: 12rem;
+  color: white;
+  
+  
+}
+
+.right-div{
+  background-color: rgb(21, 24, 28);
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 50vmin; 
+  box-shadow: 0 2px 40px 5px rgba(149, 0, 255,0.8);
+  transform: translate(0%, -10%);
+  height: 12rem;
+  color: white;
+}
+
+.right-div:hover{
+  background-color: rgb(21, 24, 28);
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 50vmin;
+  -webkit-animation-name: colorChange;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 6s; 
+  height: 12rem;
+   
+}
+
+
+
+.search-options-div{
+  margin: 10rem 3rem;
+}
 
 .navbar-logo {
   height: 4vmin;
@@ -342,6 +410,18 @@ ul{
 }
 
 
+.search-option-header{
+  font-size:3rem;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.search-option-text{
+  font-size: 1.6rem;
+  color: #999;
+}
 
 }
 
@@ -353,6 +433,63 @@ ul{
 /* ========================== */
 /* Desktop view */
 @media (min-width: 767px) {
+
+
+
+
+.left-div{
+  background-color: rgb(21, 24, 28);
+  width: 48%;
+  float: left;
+  border-radius: 50vmin; 
+  box-shadow: 0 2px 40px 5px rgba(0, 255, 191,0.8);
+  height: 12rem;
+  color: white;
+}
+
+
+.left-div:hover{
+   width: 48%;
+  float: left;
+  border-radius: 50vmin; 
+  background-color: rgb(21, 24, 28);
+  -webkit-animation-name: colorChange;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 6s; 
+  height: 12rem;
+  color: white;
+  
+  
+}
+
+.right-div{
+  background-color: rgb(21, 24, 28);
+  width: 48%;
+  float: right;
+  border-radius: 50vmin; 
+  box-shadow: 0 2px 40px 5px rgba(149, 0, 255,0.8);
+  transform: translate(0%, -10%);
+  height: 12rem;
+  color: white;
+}
+
+.right-div:hover{
+  background-color: rgb(21, 24, 28);
+  width: 48%;
+  float: right;
+  border-radius: 50vmin;
+  -webkit-animation-name: colorChange;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 6s; 
+  height: 12rem;
+   
+}
+
+
+
+.search-options-div{
+  margin: 10rem 3rem;
+}
 
 .navbar-logo {
   height: 4vmin;
@@ -490,6 +627,19 @@ ul{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.search-option-header{
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.search-option-text{
+  font-size: 2rem;
+  color: #999;
+}
+
 }
 
 @keyframes colorChange {  
@@ -521,57 +671,8 @@ ul{
 
 }
 
-.left-div{
-  background-color: rgb(21, 24, 28);
-  width: 48%;
-  float: left;
-  border-radius: 50vmin; 
-  box-shadow: 0 2px 40px 5px rgba(0, 255, 191,0.8);
-  height: 12rem;
-  color: white;
-}
 
 
-.left-div:hover{
-   width: 48%;
-  float: left;
-  border-radius: 50vmin; 
-  background-color: rgb(21, 24, 28);
-  -webkit-animation-name: colorChange;  
-  -webkit-animation-iteration-count: infinite;  
-  -webkit-animation-duration: 6s; 
-  height: 12rem;
-  color: white;
-  
-  
-}
-
-.right-div{
-  background-color: rgb(21, 24, 28);
-  width: 48%;
-  float: right;
-  border-radius: 50vmin; 
-  box-shadow: 0 2px 40px 5px rgba(149, 0, 255,0.8);
-  transform: translate(0%, -10%);
-  height: 12rem;
-  color: white;
-}
-
-.right-div:hover{
-  background-color: rgb(21, 24, 28);
-  width: 48%;
-  float: right;
-  border-radius: 50vmin;
-  -webkit-animation-name: colorChange;  
-  -webkit-animation-iteration-count: infinite;  
-  -webkit-animation-duration: 6s; 
-  height: 12rem;
-   
-}
-
-.search-options-div{
-  margin: 10rem 3rem;
-}
 
 /* ========================== */
 /* ========================== */

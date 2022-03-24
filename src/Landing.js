@@ -45,6 +45,8 @@ function Landing() {
 
             </div>
           </NavLink>
+
+        
           
             <NavLink href="#home-tracks">
               <div className="right-div"> 
