@@ -32,16 +32,7 @@ function shuffle(array) {
 
 
 // Variable for API data
-let [events, setEvents] = useState([{
-        "title": "Carl Cox Boiler Room Ibiza Villa Takeovers DJ Set",
-        "link": "vy-k0FopsmY",
-        "img": "https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg"
-    },
-    {
-        "title": "Solomun Boiler Room DJ Set",
-        "link": "bk6Xst6euQk",
-        "img": "https://i.ytimg.com/vi/bk6Xst6euQk/hqdefault.jpg"
-    }]);
+let [events, setEvents] = useState([]);
 
 let [search, setSearch] = useState("");
 let [searchComments, setSearchComments]= useState(initSearchState);
@@ -54,8 +45,6 @@ async function getData() {
 		let { data:youtube, error } =  await supabase
 		.from('youtube')
 		.select('*')
-		
-		youtube = shuffle(youtube)
 		setEvents(youtube)
 
  }
@@ -82,16 +71,15 @@ function onlyUnique(value, index, self) {
 
 async function queryTracks(e) {
 
-	console.log("Fetching sets with title query...")
 
 
 	let { data:youtube, error } =  await supabase
 		.from('comments')
 		.select('*')
-		.textSearch('text', `${e}`)
+		.textSearch('fts', `${e}`)
 		.select('id_val')
 
-		console.log(`${e}`)
+		
 
 		
 
@@ -238,7 +226,7 @@ const searchQuery = (e) =>{
     				
 
 
-   	 			{events.map(block=>VideoCard(block))};
+   	 			{events.map(block=>VideoCard(block))}
 
 
     		</div>
