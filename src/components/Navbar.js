@@ -29,9 +29,9 @@ const NavbarComponent = (props) => {
     <div className="navBarDiv">
       <Navbar color="#222222" dark expand="md" fixed="top">
 
-       <NavLink href="#home-tracks"> <NavbarBrand href="#home-tracks"><img 
+       <NavLink href="#home"> <img 
         							class = "navbar-logo" 
-        							src = {navlogo}/></NavbarBrand></NavLink>
+        							src = {navlogo}/></NavLink>
 
         <NavbarToggler onClick={toggle} />
 
