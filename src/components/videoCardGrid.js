@@ -71,16 +71,11 @@ function onlyUnique(value, index, self) {
 
 async function queryTracks(e) {
 
-
-
 	let { data:youtube, error } =  await supabase
 		.from('comments')
 		.select('*')
 		.textSearch('fts', `${e}`)
 		.select('id_val')
-
-		
-
 		
 
 	var queryString = ''

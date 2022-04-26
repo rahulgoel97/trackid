@@ -29,7 +29,7 @@ const NavbarComponent = (props) => {
     <div className="navBarDiv">
       <Navbar color="#222222" dark expand="md" fixed="top">
 
-       <NavLink href="#home-tracks"> <NavbarBrand href="/"><img 
+       <NavLink href="#home-tracks"> <NavbarBrand href="#home-tracks"><img 
         							class = "navbar-logo" 
         							src = {navlogo}/></NavbarBrand></NavLink>
 
