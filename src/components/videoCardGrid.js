@@ -16,7 +16,7 @@ const VideoCardGrid = ({query, initSearchState}) => {
 // Variable for API data
 let [events, setEvents] = useState([]);
 
-let [search, setSearch] = useState("Search for sets or tracks...");
+let [search, setSearch] = useState("🔍 Search 1,642 sets...");
 let [searchComments, setSearchComments]= useState(initSearchState);
 
 
