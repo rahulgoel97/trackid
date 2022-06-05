@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/trackid/static/css/main.6e637961.chunk.css",
-    "main.js": "/trackid/static/js/main.6db46d92.chunk.js",
-    "main.js.map": "/trackid/static/js/main.6db46d92.chunk.js.map",
+    "main.css": "/trackid/static/css/main.50311a2c.chunk.css",
+    "main.js": "/trackid/static/js/main.7d61b0c6.chunk.js",
+    "main.js.map": "/trackid/static/js/main.7d61b0c6.chunk.js.map",
     "runtime-main.js": "/trackid/static/js/runtime-main.9b0abb82.js",
     "runtime-main.js.map": "/trackid/static/js/runtime-main.9b0abb82.js.map",
     "static/css/2.d54f298c.chunk.css": "/trackid/static/css/2.d54f298c.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.3c4df8f4.chunk.js.map": "/trackid/static/js/3.3c4df8f4.chunk.js.map",
     "index.html": "/trackid/index.html",
     "static/css/2.d54f298c.chunk.css.map": "/trackid/static/css/2.d54f298c.chunk.css.map",
-    "static/css/main.6e637961.chunk.css.map": "/trackid/static/css/main.6e637961.chunk.css.map",
+    "static/css/main.50311a2c.chunk.css.map": "/trackid/static/css/main.50311a2c.chunk.css.map",
     "static/js/2.0f5acbb0.chunk.js.LICENSE.txt": "/trackid/static/js/2.0f5acbb0.chunk.js.LICENSE.txt",
     "static/media/bootstrap.css": "/trackid/static/media/glyphicons-halflings-regular.be810be3.woff2",
     "static/media/trackid_logo.002f8f78.png": "/trackid/static/media/trackid_logo.002f8f78.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.9b0abb82.js",
     "static/css/2.d54f298c.chunk.css",
     "static/js/2.0f5acbb0.chunk.js",
-    "static/css/main.6e637961.chunk.css",
-    "static/js/main.6db46d92.chunk.js"
+    "static/css/main.50311a2c.chunk.css",
+    "static/js/main.7d61b0c6.chunk.js"
   ]
 }
