@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import VideoCard from './videoCard.js'
 import axios from "axios";
 import Toggle from 'react-toggle'
-import { supabase } from './supabaseClient'
+import { supabase } from './supabaseClient';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 // Components
@@ -11,42 +12,21 @@ import { supabase } from './supabaseClient'
 const VideoCardGrid = ({query, initSearchState}) => {
 
 
-// Randomize initial grid
-function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
-
-  // While there remain elements to shuffle...
-  while (currentIndex != 0) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}
-
 
 // Variable for API data
 let [events, setEvents] = useState([]);
 
-let [search, setSearch] = useState("");
+let [search, setSearch] = useState("Search for sets or tracks...");
 let [searchComments, setSearchComments]= useState(initSearchState);
 
 
 
 async function getData() {
-	
 		
 		let { data:youtube, error } =  await supabase
 		.from('youtube')
 		.select('*')
 		setEvents(youtube)
-
  }
 
 async function queryData(e) {
@@ -56,11 +36,27 @@ async function queryData(e) {
 		.select('*')
 		.textSearch('title', `${e}`)
 		
-		if(youtube==null){
-
+		if(youtube==null || youtube.length==0){
+			toast.error("😔 Couldn't find that one, try again",
+			{
+				style: {
+			      borderRadius: '10px',
+			      background: '#111',
+			      color: '#fff',
+			    },
+			})
 		}
 		else{
 			setEvents(youtube)
+			toast.success('Found!',
+			{
+				style: {
+			      borderRadius: '10px',
+			      background: '#111',
+			      color: '#fff',
+			    },
+			})
+
 		}
 
 }
@@ -88,7 +84,7 @@ async function queryTracks(e) {
 		}
 	}
 	catch{
-		console.log("");
+		console.log("Error, try again!");
 	}
 
 	queryString = queryString.substring(0, queryString.length - 2);
@@ -117,35 +113,39 @@ async function queryTracks(e) {
 	//		)
 	//	`)
 
-	if(titleData==null){
 
-	}
-	else{
-		setEvents(titleData)
-	}
+	if(youtube==null || titleData.length==0){
+			toast.error("😔 Couldn't find that one, try again",
+
+			{
+				style: {
+			      borderRadius: '10px',
+			      background: '#111',
+			      color: '#fff',
+			    },
+			})
+		}
+		else{
+			setEvents(titleData)
+			toast.success('Found!',
+			{
+				style: {
+			      borderRadius: '10px',
+			      background: '#111',
+			      color: '#fff',
+			    },
+			})
+
+		}
 
 }
 
 
-// Testing an API
-React.useEffect(()=>{
-	getData();
-	axios.get("https://laskzafaqxkbjowhfkfq.supabase.co/rest/v1/youtube",{
-		headers:{
-			'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhc2t6YWZhcXhrYmpvd2hma2ZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ0NTk0OTEsImV4cCI6MTk2MDAzNTQ5MX0.VgWbVMR-cwRe7Q_wmQgn2z0XaLVYQ_Ux94GlWa2nmIw',
-			'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhc2t6YWZhcXhrYmpvd2hma2ZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ0NTk0OTEsImV4cCI6MTk2MDAzNTQ5MX0.VgWbVMR-cwRe7Q_wmQgn2z0XaLVYQ_Ux94GlWa2nmIw'
-		}
-	}
-		).then((res)=>{
-		setEvents(res.data)
-	});
-},[]);
-
+	
 
 
 const toggleSearch = (e) =>{
 
-	console.log(e.target.checked)
 
 	if(e.target.checked==true){
 		setSearchComments(1)
@@ -156,31 +156,37 @@ const toggleSearch = (e) =>{
 
 }
 
-const searchQuery = (e) =>{
+const setSearchQuery = (e)=>{
+	setSearch(e.target.value)
+}
+
+
+const searchQuery = () =>{
+	
+
+	var e = search
 	
 	try{
-
-			setSearch(e.target.value)	
 			
 
 			if(searchComments==0){
 				
-					queryData(e.target.value)
+					queryData(e)
 			}
 			else if(searchComments==1){
 		
-					queryTracks(e.target.value)
+					queryTracks(e)
 				}
 		}
 	catch{
 			setSearch(e)
 			if(searchComments==0){
 				
-					queryData(e.target.value)
+					queryData(e)
 			}
 			else if(searchComments==1){
 			
-				queryTracks(e.target.value)
+				queryTracks(e)
 			}
 		}
 	}
@@ -191,12 +197,13 @@ const searchQuery = (e) =>{
   	<div>
 
   		<div className="searchBarDiv">
-
+  				<Toaster />
 		  		<input className="searchbar" 
 		                 type="text" 
 		                 name="name"
 		                 placeholder={search}
-		                 onChange = {searchQuery}
+		                 onChange = {setSearchQuery}
+		                 
 		                  />
 
 		        <div className="toggleButtonDiv">
@@ -209,7 +216,15 @@ const searchQuery = (e) =>{
 				</label>
 				</div>
 		         
-					  
+
+		         <button 
+		         	className="submit-button"
+		         	type="button"
+		         	onClick = {searchQuery}>
+		         		Search
+
+		         </button>
+				
 				 
 
 		</div>

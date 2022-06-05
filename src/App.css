@@ -52,7 +52,7 @@
 
 .searchbar{
   background-color: rgb(21, 24, 28);
-  width:50%;
+  width:40%;
   padding:1.5rem 1.5rem;
   border: none;
   border-radius: 2vmin;
@@ -62,18 +62,15 @@
 .searchbar:focus{
   background-color: rgb(21, 24, 28);
   color: white;
-  width:50%;
+  width:40%;
   padding:1.5rem 1.5rem;
   border: none;
   border-radius: 2vmin;
   outline-offset: 0px;
   outline: none;
   z-index: 4;
-  box-shadow: 0 20px 40px 10px rgba(149, 0, 255,0.8);
-  transition: 0.5s;
-  -webkit-animation-name: colorChange;  
-  -webkit-animation-iteration-count: infinite;  
-  -webkit-animation-duration: 6s; 
+  
+ 
 }
 
 a {
@@ -234,7 +231,7 @@ a {
 
 .flex-grid{
 
-  transform: translate(0%, 0%);
+  transform: translate(0%, 20%);
  
 }
 
@@ -268,14 +265,31 @@ a {
 .searchBarDiv{
   position: relative;
   z-index:4;
-  height:25vh;
-  transform:translate(15%, 60%);
+  height:10vh;
+  transform:translate(0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
 }
 
 .toggleButtonDiv{
   margin: 10px 10px;
-  transform: translate(55%, -100%);
+  transform: translate(5%, 10%);
+}
+
+.submit-button{
+  border: none;
+  background-color: rgba(149, 0, 255,0.6);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  color: white;
+  outline: none;
+  transform: translate(4%, -6%);
+  height: 4rem;
+  width: 8rem;
+  margin-left: 5px;
 }
 
 .greeting-text{
@@ -510,12 +524,43 @@ ul{
   position: relative;
   z-index:4;
   height:20vh;
-  transform:translate(22%, 75%);
+  transform:translate(0%, 35%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .toggleButtonDiv{
   margin: 10px 10px;
-  transform: translate(51%, -100%);
+  transform: translate(10%, 15%);
+}
+
+
+.submit-button{
+  border: none;
+  background-color: rgba(149, 0, 255,0.6);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  color: white;
+  outline: none;
+  transform: translate(4%, -6%);
+  height: 4rem;
+  width: 8rem;
+  margin-left: 5px;
+}
+
+
+.submit-button:hover{
+  border: none;
+  background-color: rgba(149, 0, 255,1);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  color: white;
+  outline: none;
+  transform: translate(4%, -6%);
+  height: 4rem;
+  width: 8rem;
+  margin-left: 5px;
 }
 
 
@@ -639,6 +684,8 @@ ul{
   font-size: 2rem;
   color: #999;
 }
+
+
 
 }
 
