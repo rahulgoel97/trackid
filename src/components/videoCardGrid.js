@@ -195,9 +195,9 @@ const searchQuery = () =>{
   return (
 
   	<div>
-
+  		<Toaster />
   		<div className="searchBarDiv">
-  				<Toaster />
+  				
 		  		<input className="searchbar" 
 		                 type="text" 
 		                 name="name"

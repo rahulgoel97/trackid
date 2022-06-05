@@ -209,7 +209,7 @@ a {
 
 .flex-grid{
 
-  transform: translate(3vw, 20%);
+  transform: translate(3vw, 9vh);
  
 }
 
@@ -244,7 +244,7 @@ a {
   position: relative;
   z-index:4;
   height:10vh;
-  transform:translate(0%, 100%);
+  transform:translate(0%, 6vh);
   display: flex;
   align-items: center;
   justify-content: center;
