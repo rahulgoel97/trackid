@@ -36,7 +36,7 @@ function Landing() {
 
           <div className="search-options-div">
           
-          <NavLink href="#home-sets">
+          <NavLink href="/home-sets">
             <div className="left-div"> 
 
                   <p className="search-option-header"> Search sets </p> 
@@ -45,8 +45,10 @@ function Landing() {
 
             </div>
           </NavLink>
+
+        
           
-            <NavLink href="#home-tracks">
+            <NavLink href="/home-tracks">
               <div className="right-div"> 
 
                     <p className="search-option-header"> Search tracks</p> 
