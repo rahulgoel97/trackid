@@ -62,6 +62,10 @@ const NavbarComponent = (props) => {
               <NavLink href="#login">Login</NavLink>
             </NavItem>
 
+            <NavItem className="nav-item">
+              <NavLink href="https://medium.com/@goel.labs">Engineering Blog</NavLink>
+            </NavItem>
+
             
             
         
