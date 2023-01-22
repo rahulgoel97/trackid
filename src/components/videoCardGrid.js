@@ -218,7 +218,7 @@ const searchQuery = () =>{
 		         
 
 		         <button 
-		         	className="submit-button"
+		         	className="search-submit-button"
 		         	type="button"
 		         	onClick = {searchQuery}>
 		         		Search

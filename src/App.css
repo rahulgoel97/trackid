@@ -71,6 +71,8 @@ a {
 
 }
 
+
+
 .greeting-logo{
   font-size: 9rem;
   font-weight: bold;
@@ -260,7 +262,7 @@ a {
   transform: translate(2vw, 2vw);
 }
 
-.submit-button{
+.search-submit-button{
   border: none;
   background-color: rgba(149, 0, 255,0.6);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -445,6 +447,75 @@ ul{
   transform: translate(0%, 1.5vh);
 }
 
+.register-text{
+    font-size: 4rem;
+    text-align: left;
+    color: rgba(149, 0, 255,0.8);
+    margin: 1rem 2.5rem;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+
+.register-box{
+    transform: translate(10vw, 20vh);
+    background-color: rgb(21, 24, 28);
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+    height: 60%;
+    box-shadow: 0 2px 40px 5px rgba(149, 0, 255,0.8);
+
+}
+
+.register-form-label{
+    font-size: 1rem;
+    text-align: left;
+    margin: 0rem 2.5rem;
+    padding: 1rem 1rem;
+    color: grey;
+}
+
+.email-div{
+    margin: 2rem 2rem;
+}
+
+#input-email{
+    width: 70%;
+}
+
+.password-div{
+    margin: 2rem 2rem;
+}
+
+#input-password{
+    width: 70%;
+    
+}
+
+.submit-button{
+    margin: 2rem 2rem;
+    width: 75%;
+    background-color: #9822FF;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+.submit-button:hover{
+    margin: 2rem 2rem;
+    width: 75%;
+    background-color: black;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
 }
 
 /* ========================== */
@@ -569,7 +640,7 @@ ul{
  
 }
 
-.submit-button{
+.search-submit-button{
   border: none;
   background-color: rgba(149, 0, 255,0.6);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -583,7 +654,7 @@ ul{
 }
 
 
-.submit-button:hover{
+.search-submit-button:hover{
   border: none;
   background-color: rgba(149, 0, 255,1);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -719,6 +790,82 @@ ul{
 }
 
 
+
+
+.title-register{
+    font-size: 2rem;
+    text-align: center;
+    transform: translate(0%, 80%);
+    
+}
+
+.register-text{
+    font-size: 4rem;
+    text-align: left;
+    color: rgba(149, 0, 255,0.8);
+    margin: 1rem 2.5rem;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+.register-box{
+    transform: translate(40vw, 20vh);
+    background-color: rgb(21, 24, 28);
+    width: 25%;
+    border-radius: 5px;
+    text-align: center;
+    height: 60%;
+    box-shadow: 0 2px 40px 5px rgba(149, 0, 255,0.8);
+
+}
+
+.register-form-label{
+    font-size: 1rem;
+    text-align: left;
+    margin: 0rem 2.5rem;
+    padding: 1rem 1rem;
+    color: grey;
+}
+
+.email-div{
+    margin: 2rem 2rem;
+}
+
+#input-email{
+    width: 70%;
+}
+
+.password-div{
+    margin: 2rem 2rem;
+}
+
+#input-password{
+    width: 70%;
+    
+}
+
+.submit-button{
+    margin: 2rem 2rem;
+    width: 75%;
+    background-color: #9822FF;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+.submit-button:hover{
+    margin: 2rem 2rem;
+    width: 75%;
+    background-color: black;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 1.5rem;
+}
 
 }
 
