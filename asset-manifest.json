@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/trackid/static/css/main.bb078b01.chunk.css",
-    "main.js": "/trackid/static/js/main.51e131a7.chunk.js",
-    "main.js.map": "/trackid/static/js/main.51e131a7.chunk.js.map",
-    "runtime-main.js": "/trackid/static/js/runtime-main.5ab9767e.js",
-    "runtime-main.js.map": "/trackid/static/js/runtime-main.5ab9767e.js.map",
+    "main.css": "/trackid/static/css/main.c8f48210.chunk.css",
+    "main.js": "/trackid/static/js/main.7f39ee29.chunk.js",
+    "main.js.map": "/trackid/static/js/main.7f39ee29.chunk.js.map",
+    "runtime-main.js": "/trackid/static/js/runtime-main.db70dd2a.js",
+    "runtime-main.js.map": "/trackid/static/js/runtime-main.db70dd2a.js.map",
     "static/css/2.d54f298c.chunk.css": "/trackid/static/css/2.d54f298c.chunk.css",
-    "static/js/2.b981d43a.chunk.js": "/trackid/static/js/2.b981d43a.chunk.js",
-    "static/js/2.b981d43a.chunk.js.map": "/trackid/static/js/2.b981d43a.chunk.js.map",
-    "static/js/3.af2af7a0.chunk.js": "/trackid/static/js/3.af2af7a0.chunk.js",
-    "static/js/3.af2af7a0.chunk.js.map": "/trackid/static/js/3.af2af7a0.chunk.js.map",
+    "static/js/2.30fd674d.chunk.js": "/trackid/static/js/2.30fd674d.chunk.js",
+    "static/js/2.30fd674d.chunk.js.map": "/trackid/static/js/2.30fd674d.chunk.js.map",
+    "static/js/3.fbfc7026.chunk.js": "/trackid/static/js/3.fbfc7026.chunk.js",
+    "static/js/3.fbfc7026.chunk.js.map": "/trackid/static/js/3.fbfc7026.chunk.js.map",
     "index.html": "/trackid/index.html",
     "static/css/2.d54f298c.chunk.css.map": "/trackid/static/css/2.d54f298c.chunk.css.map",
-    "static/css/main.bb078b01.chunk.css.map": "/trackid/static/css/main.bb078b01.chunk.css.map",
-    "static/js/2.b981d43a.chunk.js.LICENSE.txt": "/trackid/static/js/2.b981d43a.chunk.js.LICENSE.txt",
+    "static/css/main.c8f48210.chunk.css.map": "/trackid/static/css/main.c8f48210.chunk.css.map",
+    "static/js/2.30fd674d.chunk.js.LICENSE.txt": "/trackid/static/js/2.30fd674d.chunk.js.LICENSE.txt",
     "static/media/bootstrap.css": "/trackid/static/media/glyphicons-halflings-regular.be810be3.woff2",
     "static/media/trackid_logo.002f8f78.png": "/trackid/static/media/trackid_logo.002f8f78.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ab9767e.js",
+    "static/js/runtime-main.db70dd2a.js",
     "static/css/2.d54f298c.chunk.css",
-    "static/js/2.b981d43a.chunk.js",
-    "static/css/main.bb078b01.chunk.css",
-    "static/js/main.51e131a7.chunk.js"
+    "static/js/2.30fd674d.chunk.js",
+    "static/css/main.c8f48210.chunk.css",
+    "static/js/main.7f39ee29.chunk.js"
   ]
 }
