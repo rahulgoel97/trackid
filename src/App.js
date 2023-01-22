@@ -20,6 +20,7 @@ function App() {
       <HashRouter>
         <Switch>
                 <Route path="/" exact component={Landing} />
+                <Route path="/landing" exact component={Landing} />
                 <Route path="/home-sets" exact component={Home} />
                 <Route path="/home-tracks" exact component={HomeTracks} />
                 <Route path="/home" exact component={Home} />
