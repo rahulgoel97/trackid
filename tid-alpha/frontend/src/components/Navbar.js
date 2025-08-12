@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import navlogo from './trackid_logo.png'
 import {
   Collapse,
   Navbar,
@@ -29,37 +28,25 @@ const NavbarComponent = (props) => {
     <div className="navBarDiv">
       <Navbar color="#222222" dark expand="md" fixed="top">
 
-       <NavLink href="/"> <img 
+        <NavbarBrand href="/"><img 
         							class = "navbar-logo" 
-        							src = {navlogo}/></NavLink>
+        							src = "./trackid_logo.png"/></NavbarBrand>
 
         <NavbarToggler onClick={toggle} />
-
-
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-
-
            <NavItem className="nav-item">
-              <NavLink href="/home">Sets</NavLink>
+              <NavLink href="#home">Sets</NavLink>
             </NavItem>
             
             
 
             <NavItem className="nav-item">
-              <NavLink href="/about">About</NavLink>
+              <NavLink href="#about">About (Coming Soon)</NavLink>
             </NavItem>
 
             <NavItem className="nav-item">
-              <NavLink href="/feedback">Feedback</NavLink>
-            </NavItem>
-
-            <NavItem className="nav-item">
-              <NavLink href="/register">Register</NavLink>
-            </NavItem>
-
-            <NavItem className="nav-item">
-              <NavLink href="/login">Login</NavLink>
+              <NavLink href="#about">Feedback (Coming Soon)</NavLink>
             </NavItem>
 
             

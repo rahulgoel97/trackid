@@ -1,36 +1,28 @@
 import './App.css';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Home from './Home.js'
 import HomeTracks from './HomeTracks.js'
 import Feedback from './Feedback.js'
 import Mission from './Mission.js'
 import Landing from './Landing.js'
-import Set from './Set.js';
-import Register from './RegisterPage.js';
-import Login from './Login.js';
-import Welcome from './Welcome.js';
-import { AuthProvider } from './contexts/Auth';
- 
+import Set from './Set.js'
+
 function App() {
   return (
     <div className="App">
-    <AuthProvider>
-      <BrowserRouter>
-      	<Routes>
-                <Route path="/home-sets" element={<Home/>} />
-                <Route path="/home-tracks" element={<HomeTracks/>} />
-  	          	<Route path="/home" element={<Home/>} />
-  	          	<Route path="/search" element={<Home/>} />
-  	          	<Route path="/feedback" element={<Feedback/>} />
-  	          	<Route path="/about" element={<Mission/>} />
-                <Route path="/welcome" element={<Welcome/>} />
-                <Route path="/register" element={<Register/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/set/:link" element={<Set/>} />
-  	          	<Route path="/" element={<Landing/>} />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+    
+    	<HashRouter basename={process.env.PUBLIC_URL}>
+    		<Switch>
+              <Route path="/home-sets" exact component={Home} />
+              <Route path="/home-tracks" exact component={HomeTracks} />
+	          	<Route path="/home" exact component={Home} />
+	          	<Route path="/search" exact component={Home} />
+	          	<Route path="/feedback" exact component={Feedback} />s
+	          	<Route path="/about" exact component={Mission} />
+              <Route path="/set/:link" exact component={Set} />
+	          	<Route path="/" exact component={Landing} />
+         	</Switch>
+        </HashRouter>
    
     </div>
   );
