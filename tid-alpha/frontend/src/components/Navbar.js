@@ -41,13 +41,7 @@ const NavbarComponent = (props) => {
             
             
 
-            <NavItem className="nav-item">
-              <NavLink href="#about">About (Coming Soon)</NavLink>
-            </NavItem>
-
-            <NavItem className="nav-item">
-              <NavLink href="#about">Feedback (Coming Soon)</NavLink>
-            </NavItem>
+            
 
             
             

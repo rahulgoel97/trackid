@@ -147,10 +147,10 @@ async function queryTracks(e) {
 // Testing an API
 React.useEffect(()=>{
 	getData();
-	axios.get("https://laskzafaqxkbjowhfkfq.supabase.co/rest/v1/youtube",{
+	axios.get("https://fnpylpuqrgjudgriiokd.supabase.co/rest/v1/youtube",{
 		headers:{
-			'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhc2t6YWZhcXhrYmpvd2hma2ZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ0NTk0OTEsImV4cCI6MTk2MDAzNTQ5MX0.VgWbVMR-cwRe7Q_wmQgn2z0XaLVYQ_Ux94GlWa2nmIw',
-			'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhc2t6YWZhcXhrYmpvd2hma2ZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ0NTk0OTEsImV4cCI6MTk2MDAzNTQ5MX0.VgWbVMR-cwRe7Q_wmQgn2z0XaLVYQ_Ux94GlWa2nmIw'
+			'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZucHlscHVxcmdqdWRncmlpb2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1MjUzMTEsImV4cCI6MjA4OTEwMTMxMX0.jzGNBtZXCuPYUKn0EKShuvQD5ukhIsJp86-OpI5chPE',
+			'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZucHlscHVxcmdqdWRncmlpb2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1MjUzMTEsImV4cCI6MjA4OTEwMTMxMX0.jzGNBtZXCuPYUKn0EKShuvQD5ukhIsJp86-OpI5chPE'
 		}
 	}
 		).then((res)=>{
