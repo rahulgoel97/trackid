@@ -14,6 +14,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import logo from '../trackid_logo.png';
 
 const NavbarComponent = (props) => {
 
@@ -26,29 +27,15 @@ const NavbarComponent = (props) => {
 
   return (
     <div className="navBarDiv">
-      <Navbar color="#222222" dark expand="md" fixed="top">
+      <Navbar color="#222222" dark expand="md">
 
         <NavbarBrand href="/"><img 
-        							class = "navbar-logo" 
-        							src = "./trackid_logo.png"/></NavbarBrand>
+        className="navbar-logo" 
+        src={logo}/></NavbarBrand>
 
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-           <NavItem className="nav-item">
-              <NavLink href="#home">Sets</NavLink>
-            </NavItem>
-            
-            
-
-            
-
-            
-            
         
-          </Nav>
           
-        </Collapse>
+       
       </Navbar>
 
     </div>

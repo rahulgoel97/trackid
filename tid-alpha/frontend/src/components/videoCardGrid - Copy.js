@@ -1,0 +1,238 @@
+import '../App.css';
+import React, { useState, useEffect } from 'react';
+import VideoCard from './videoCard.js'
+import axios from "axios";
+import Toggle from 'react-toggle'
+import { supabase } from './supabaseClient'
+
+
+// Components
+
+const VideoCardGrid = ({query, initSearchState}) => {
+
+
+// Randomize initial grid
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+
+// Variable for API data
+let [events, setEvents] = useState([{
+        "title": "Carl Cox Boiler Room Ibiza Villa Takeovers DJ Set",
+        "link": "vy-k0FopsmY",
+        "img": "https://i.ytimg.com/vi/vy-k0FopsmY/hqdefault.jpg"
+    },
+    {
+        "title": "Solomun Boiler Room DJ Set",
+        "link": "bk6Xst6euQk",
+        "img": "https://i.ytimg.com/vi/bk6Xst6euQk/hqdefault.jpg"
+    }]);
+
+let [search, setSearch] = useState("");
+let [searchComments, setSearchComments]= useState(initSearchState);
+
+
+
+async function getData() {
+	
+		
+		let { data:youtube, error } =  await supabase
+		.from('youtube')
+		.select('*')
+		
+		youtube = shuffle(youtube)
+		setEvents(youtube)
+
+ }
+
+async function queryData(e) {
+
+	let { data:youtube, error } =  await supabase
+		.from('youtube')
+		.select('*')
+		.textSearch('title', `${e}`)
+		
+		if(youtube==null){
+
+		}
+		else{
+			setEvents(youtube)
+		}
+
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+async function queryTracks(e) {
+
+	console.log("Fetching sets with title query...")
+
+
+	let { data:youtube, error } =  await supabase
+		.from('comments')
+		.select('*')
+		.textSearch('text', `${e}`)
+		.select('id_val')
+
+		console.log(`${e}`)
+
+		
+
+	var queryString = ''
+
+	try{
+	
+		for (const yt of youtube.filter(onlyUnique)){
+			
+			queryString+=yt.id_val + " | "
+		}
+	}
+	catch{
+		console.log("");
+	}
+
+	queryString = queryString.substring(0, queryString.length - 2);
+
+	
+
+	let { data:titleData, titleError } =  await supabase
+		.from('youtube')
+		.select('*')
+		.textSearch('link', `${queryString}`)
+		
+
+	if(titleData==null){
+
+	}
+	else{
+		setEvents(titleData)
+	}
+
+}
+
+
+// Testing an API
+React.useEffect(()=>{
+	getData();
+	axios.get("https://fnpylpuqrgjudgriiokd.supabase.co/rest/v1/youtube",{
+		headers:{
+			'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZucHlscHVxcmdqdWRncmlpb2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1MjUzMTEsImV4cCI6MjA4OTEwMTMxMX0.jzGNBtZXCuPYUKn0EKShuvQD5ukhIsJp86-OpI5chPE',
+			'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZucHlscHVxcmdqdWRncmlpb2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1MjUzMTEsImV4cCI6MjA4OTEwMTMxMX0.jzGNBtZXCuPYUKn0EKShuvQD5ukhIsJp86-OpI5chPE'
+		}
+	}
+		).then((res)=>{
+		setEvents(res.data)
+	});
+},[]);
+
+
+
+const toggleSearch = (e) =>{
+
+	console.log(e.target.checked)
+
+	if(e.target.checked==true){
+		setSearchComments(1)
+	}
+	else{
+		setSearchComments(0)
+	}
+
+}
+
+// Update search text only — no API call yet
+const searchQuery = (e) =>{
+	setSearch(e.target.value)
+}
+
+// Fire API only when button is clicked
+const handleSearch = () =>{
+	try{
+		if(searchComments==0){
+			queryData(search)
+		}
+		else if(searchComments==1){
+			queryTracks(search)
+		}
+	}
+	catch(err){
+		console.log("Search error: ", err)
+	}
+}
+
+// Also allow pressing Enter to trigger search
+const handleKeyDown = (e) =>{
+	if(e.key === 'Enter'){
+		handleSearch()
+	}
+}
+
+
+  return (
+
+  	<div>
+
+  		<div className="searchBarDiv" style={{display:'flex', flexDirection:'column'}}>
+
+		  		<input className="searchbar" 
+		                 type="text" 
+		                 name="name"
+		                 placeholder="Search 10K+ sets..."
+		                 value={search}
+		                 onChange={searchQuery}
+		                 onKeyDown={handleKeyDown}
+		                  />
+
+		        <div className="toggleButtonDiv">
+		        <label>
+						  <Toggle
+						  defaultChecked = {searchComments}
+						  icons={false}	 				    
+						  onChange={toggleSearch} />
+						  <span className="button-label">Sets    Tracks</span>
+				</label>
+				<button className="searchButton" onClick={handleSearch}>
+		        	Search
+		        </button>
+				</div>
+		         
+		</div>
+
+		
+
+
+    		<div className="flex-grid">
+    				
+
+
+   	 			{events.map(block=>VideoCard(block))};
+
+
+    		</div>
+
+
+
+
+    </div>
+  );
+}
+
+
+export default VideoCardGrid;

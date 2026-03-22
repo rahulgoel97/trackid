@@ -14,9 +14,7 @@
   z-index:1;
 }
 
-body {
-  overflow-x: hidden;
-}
+
 
 .NavbarText {
   color: white;
@@ -30,34 +28,6 @@ body {
 
 }
 
-.searchStatus {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  animation: fadeIn 0.3s ease;
-  vertical-align: middle;
-  margin-left: 10px;
-  transform: translate(-12rem);
-}
-
-.searchStatus.found {
-  background-color: rgba(0, 255, 191, 0.15);
-  color: rgba(0, 255, 191, 0.9);
-  border: 1px solid rgba(0, 255, 191, 0.4);
-}
-
-.searchStatus.none {
-  background-color: rgba(255, 80, 80, 0.15);
-  color: rgba(255, 80, 80, 0.9);
-  border: 1px solid rgba(255, 80, 80, 0.4);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
 
 .collapse show navbar-collapse{
   background-color:'#222';
@@ -81,7 +51,6 @@ body {
 
 .searchbar{
   background-color: rgb(21, 24, 28);
-  color: white;
   width:50%;
   padding:1.5rem 1.5rem;
   border: none;
@@ -104,10 +73,6 @@ body {
   -webkit-animation-name: colorChange;  
   -webkit-animation-iteration-count: infinite;  
   -webkit-animation-duration: 18s; 
-}
-
-.searchbar::placeholder {
-  color: rgba(255, 255, 255, 0.4);
 }
 
 a {
@@ -180,82 +145,47 @@ a {
 }
 
 
-/* ── Search button ── */
+/* ── NEW: Search button ── */
 .searchButton {
-  background-color: rgba(0, 255, 191, 0.8);
-  color: white;
+  background-color: rgb(21, 24, 28);
+  color: rgba(255, 255, 255, 0.6);
   border: none;
   border-radius: 2vmin;
   padding: 0.5rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
+  box-shadow: 0 2px 40px 5px rgba(0, 255, 191, 0.8);
   transition: 0.3s;
+  -webkit-animation-name: colorChange;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 12px;
-  transform: translateY(-25px);
+  margin-left: 8px;
 }
 
 .searchButton:hover {
-  background-color: rgba(0, 255, 191, 1);
-  box-shadow: 0 2px 40px 5px rgba(0, 255, 191, 0.8);
+  color: white;
+  box-shadow: 0 2px 40px 5px rgba(149, 0, 255, 0.8);
 }
-/* ── END search button ── */
+/* ── END NEW ── */
 
 
 /* ========================== */
-/* Tablet view */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  .searchBarDiv{
-    position: relative;
-    z-index: 4;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .searchbar{
-    width: 100%;
-  }
-
-  .toggleButtonDiv{
-    margin: 10px 0;
-    transform: none;
-  }
-
-  .searchButton{
-    transform: none;
-  }
-
-  .flex-grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 2vmin;
-    max-width: 100vw;
-  }
-
-}
-
+/* ========================== */
+/* ========================== */
+/* ========================== */
+/* ========================== */
 /* ========================== */
 /* Phone view */
 @media (max-width: 767px) {
 
 .navbar-logo {
-  height: 8vmin;
-  min-height: 20px;
-  max-height: 35px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 6px;
-}
+  height: 4vmin;
+  min-height: 30px; 
+  vertical-align: 'middle';
+  transform: translateX(30%);
 
-.navbar-brand {
-  width: 100%;
-  text-align: center;
 }
 
 .flex-grid{
@@ -264,54 +194,12 @@ a {
  
 }
 
-.searchStatus {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  animation: fadeIn 0.3s ease;
-  vertical-align: middle;
-  margin-left: 10px;
-  transform: translate(9rem, -2.5rem);
-}
-.searchbar{
-  background-color: rgb(21, 24, 28);
-  color: white;
-  width:80%;
-  padding:0.8rem 0.8rem;
-  border: none;
-  border-radius: 2vmin;
- }
-
-.searchbar:focus{
-   background-color: rgb(21, 24, 28);
-  color: white;
-  width:80%;
-  padding:0.8rem 0.8rem;
-  border: none;
-  border-radius: 2vmin;
-}
-
-.toggleButtonDiv{
-  margin: 10px 10px;
-  transform: translate(0rem, 1.5rem);
-  font-size: 0.1rem;
-}
-
-.searchButton{
-  transform: translate(3rem, -1.5rem);
-
-}
 .navBarDiv{
   background-color: #111;
   width: 100vw;
-  position: static;
+  position: fixed;
   z-index: 5;
-}
 
-.navbar-brand{
-  position:static;
 }
 
 .navbar-expand-md{
@@ -322,31 +210,29 @@ a {
 .home-screen-card{
   background-color: rgb(21, 24, 28);
   height: 20vmin;
-  width: 80vmin;
+  width: 65vmin;
   margin: 0vmin 1.5vmin;
   padding: 1vmin 1vmin;
   border-radius: 2vmin;
   box-shadow: 0 2px 40px 5px rgba(149, 0, 255,0.8);
   transition: 0.3s;
   position: relative;
-  transform:translate(0.3rem,0%);
-  z-index: 1;
+  transform:translate(15%,0%);
   
 }
 
 .searchBarDiv{
   position: relative;
-  z-index: 4;
-  width: 85vw;
-  margin: 0 auto;
-  padding-top: 70px;
-  padding-bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index:4;
+  height:25vh;
+  transform:translate(15%, 60%);
+
 }
 
-
-
+.toggleButtonDiv{
+  margin: 10px 10px;
+  transform: translate(55%, -100%);
+}
 
 .greeting-text{
   border-radius: 50px;
@@ -380,9 +266,8 @@ a {
   font-weight: bold;
   padding: 0.5vmin 0.5vmin;
   display: inline-block;
-  transform:translate(15%, -60%);
-  width: 60%;
-  vertical-align: middle;
+  transform:translate(20%, -80%);
+  width: 65%;
 
 }
 
@@ -404,8 +289,10 @@ a {
   width: 13vmin;
   border-radius: 50vmin;
   margin-left: 1vmin;
-  margin-top: 0vmin;
-  transform: translate(-220%, 20%);
+  margin-top: 1vmin;
+  transform: translate(-180%, 20%);
+  
+
 }
 
 
@@ -483,27 +370,26 @@ ul{
 }
 
 /* ========================== */
+/* ========================== */
+/* ========================== */
+/* ========================== */
+/* ========================== */
+/* ========================== */
 /* Desktop view */
 @media (min-width: 767px) {
 
 .navbar-logo {
-  height: 5vmin;
+  height: 4vmin;
+  
   vertical-align: 'middle';
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
+  transform:translateY(-6%);
 
-}
-
-.navbar-brand {
-  width: 100%;
-  text-align: center;
 }
 
 .navBarDiv{
   background-color: #111;
   width: 100%;
-  position: static;
+  position: fixed;
   z-index: 5;
 }
 
@@ -511,10 +397,7 @@ ul{
   position: relative;
   z-index:4;
   height:20vh;
-  width: 80%;
-  margin: 0 auto;
-  right: 25%;
-  transform: translate(50%, 75%);
+  transform:translate(22%, 75%);
 }
 
 .toggleButtonDiv{
@@ -524,18 +407,14 @@ ul{
 
 
 .flex-grid{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
+  transform: translate(9%, 0%);
   margin-top: 50px;
-  padding: 0 2vmin;
 }
 
 .home-screen-card{
   background-color: rgb(21, 24, 28);
   height: 48vmin;
-  width: 38vmin;
+  width: 45vmin;
   margin: 0vmin 2vmin;
   padding: 1.5vmin 2vmin;
   border-radius: 2vmin;
@@ -718,6 +597,11 @@ ul{
   margin: 10rem 3rem;
 }
 
+/* ========================== */
+/* ========================== */
+/* ========================== */
+/* ========================== */
+/* ========================== */
 /* ========================== */
 /* Toggle CSS */
 
