@@ -346,17 +346,45 @@ a {
 }
 
 
-
+.greeting-logo{
+  font-size: 5rem;
+}
 
 .greeting-text{
   border-radius: 50px;
   border: none;
   color: rgba(212, 255, 0,0.8);
-  font-size: 3rem;
+  font-size: 1.3rem;
   color: #999;
 }
 
+.search-options-div{
+  transform: translate(-1rem, -5rem);
+  width: 85%;
+}
 
+.search-option-header{
+  font-size: 1.2rem;
+  transform: translate(5px,5px);
+}
+
+.search-option-text{
+  font-size: 1rem;
+}
+
+.left-div{
+  width: 100% !important;
+  height: 13vh !important;
+  transform: translate(0rem,0rem);
+  
+}
+
+.right-div{
+  width: 100% !important;
+  height: 13vh !important;
+  transform: translate(0rem, 0rem);
+  margin-top: 20px;
+}
 
 .home-screen-card:hover {
   background-color: rgb(21, 24, 28);

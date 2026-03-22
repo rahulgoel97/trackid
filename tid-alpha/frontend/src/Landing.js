@@ -41,7 +41,7 @@ function Landing() {
 
                   <p className="search-option-header"> Search sets </p> 
 
-                  <p className="search-option-text"> Search sets by DJ name or set name </p>
+                  <p className="search-option-text"> Search sets by DJ or set name </p>
 
             </div>
           </NavLink>
@@ -51,7 +51,7 @@ function Landing() {
 
                     <p className="search-option-header"> Search tracks</p> 
 
-                    <p className="search-option-text"> Search by detected artists & tracks within DJ sets</p>
+                    <p className="search-option-text"> Search by artists or tracks within sets</p>
 
 
               </div>
