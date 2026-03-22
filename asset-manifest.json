@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/trackid/static/css/main.adc7ad2b.chunk.css",
-    "main.js": "/trackid/static/js/main.708182a3.chunk.js",
-    "main.js.map": "/trackid/static/js/main.708182a3.chunk.js.map",
-    "runtime-main.js": "/trackid/static/js/runtime-main.9d12fcf6.js",
-    "runtime-main.js.map": "/trackid/static/js/runtime-main.9d12fcf6.js.map",
+    "main.css": "/trackid/static/css/main.c87c3f04.chunk.css",
+    "main.js": "/trackid/static/js/main.ce7571b7.chunk.js",
+    "main.js.map": "/trackid/static/js/main.ce7571b7.chunk.js.map",
+    "runtime-main.js": "/trackid/static/js/runtime-main.582a5359.js",
+    "runtime-main.js.map": "/trackid/static/js/runtime-main.582a5359.js.map",
     "static/css/2.a48a872c.chunk.css": "/trackid/static/css/2.a48a872c.chunk.css",
-    "static/js/2.017f0fac.chunk.js": "/trackid/static/js/2.017f0fac.chunk.js",
-    "static/js/2.017f0fac.chunk.js.map": "/trackid/static/js/2.017f0fac.chunk.js.map",
-    "static/js/3.8bad2a4a.chunk.js": "/trackid/static/js/3.8bad2a4a.chunk.js",
-    "static/js/3.8bad2a4a.chunk.js.map": "/trackid/static/js/3.8bad2a4a.chunk.js.map",
+    "static/js/2.c06fc797.chunk.js": "/trackid/static/js/2.c06fc797.chunk.js",
+    "static/js/2.c06fc797.chunk.js.map": "/trackid/static/js/2.c06fc797.chunk.js.map",
+    "static/js/3.330a50ef.chunk.js": "/trackid/static/js/3.330a50ef.chunk.js",
+    "static/js/3.330a50ef.chunk.js.map": "/trackid/static/js/3.330a50ef.chunk.js.map",
     "index.html": "/trackid/index.html",
     "static/css/2.a48a872c.chunk.css.map": "/trackid/static/css/2.a48a872c.chunk.css.map",
-    "static/css/main.adc7ad2b.chunk.css.map": "/trackid/static/css/main.adc7ad2b.chunk.css.map",
-    "static/js/2.017f0fac.chunk.js.LICENSE.txt": "/trackid/static/js/2.017f0fac.chunk.js.LICENSE.txt"
+    "static/css/main.c87c3f04.chunk.css.map": "/trackid/static/css/main.c87c3f04.chunk.css.map",
+    "static/js/2.c06fc797.chunk.js.LICENSE.txt": "/trackid/static/js/2.c06fc797.chunk.js.LICENSE.txt",
+    "static/media/trackid_logo.002f8f78.png": "/trackid/static/media/trackid_logo.002f8f78.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9d12fcf6.js",
+    "static/js/runtime-main.582a5359.js",
     "static/css/2.a48a872c.chunk.css",
-    "static/js/2.017f0fac.chunk.js",
-    "static/css/main.adc7ad2b.chunk.css",
-    "static/js/main.708182a3.chunk.js"
+    "static/js/2.c06fc797.chunk.js",
+    "static/css/main.c87c3f04.chunk.css",
+    "static/js/main.ce7571b7.chunk.js"
   ]
 }
